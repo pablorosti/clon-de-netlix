@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Suspense, lazy} from 'react';
+
+import { Dramas } from "./components/Dramas";
+import { Infantile } from "./components/infantile";
+import { Populate } from "./components/Populate";
+
+import { ModalInfo } from "./components/ModalInfo";
+import { Comedies } from "./components/Comedies";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Populate />
+      <Dramas />
+      <Infantile />
+      <Comedies/>
+
+      <ModalInfo/> 
+    </>
   );
 }
 
